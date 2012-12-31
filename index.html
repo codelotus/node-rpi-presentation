@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 
 	<head>
 		<meta charset="utf-8">
@@ -65,17 +65,53 @@
                 </section>
 
 				<section>
-					<h2>Point of View New Details</h2>
-					<p>
-						Press <strong>ESC</strong> to that enter the slide overview. Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
+                    <h2>Model B</h2>
+					<img src="images/raspi_blue_white.png">
 				</section>
 
+                <section>
+
+                    <table style="margin-left:auto;margin-right:auto;">
+                        <tr>
+                            <th>Model A</th>
+                            <th>Model B</th>
+                        </tr>
+                        <tr>
+                            <td>
+                            <ul style="list-style-type: none;">
+                                <li>$25</li>
+                                <li>700 MHz ARM11 processor</li>
+                                <li>256MB RAM</li>
+                                <li>1 USB</li>
+                                <li>No Ethernet</li>
+                            </ul>
+                            </td>
+                            <td>
+                            <ul style="list-style-type: none;">
+                                <li>$35</li>
+                                <li>700 MHz ARM11 Processor</li>
+                                <li>512MB RAM</li>
+                                <li>2 USB</li>
+                                <li>1 Ethernet</li>
+                            </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+
 				<section>
-					<h2>rvl.io</h2>
-					<p>
-						If you don't like writing slides in HTML you can use the online editor <a href="http://www.rvl.io" target="_blank">rvl.io</a>.
-					</p>
+					<h2>Installing Node</h2>
+
+						<pre><code contenteditable style="font-size: 18px; margin-top: 20px;">
+$ wget http://nodejs.org/dist/v0.8.16/node-v0.8.16.tar.gz
+$ tar -zxf node-v0.8.16.tar.gz
+$ cd node-v0.8.16
+$ ./configure
+$ make
+    # two hours later...
+$ sudo make install
+                        </code></pre>
+
 				</section>
 
 				<section>
