@@ -1,0 +1,19 @@
+{
+	"name": "RasbperrypiPresentationBenchmarks",
+	"version": "1.0.0",
+	"description": "something interesting",
+	"author": {
+		"name": "Brian Ehmann"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/codelotus/node-rpi-presentation.git"
+	},
+	"engines": {
+		"node": "~0.8.0"
+	},
+	"dependencies": {
+		"benchmark" : "~1.0.0",
+        "microtime" : "~0.3.2"
+	}
+}
