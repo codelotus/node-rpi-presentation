@@ -9,9 +9,6 @@ suite.add('RegExp#test', function() {
 .add('String#indexOf', function() {
     'Hello World!'.indexOf('o') > -1;
 })
-.add('String#match', function() {
-    !!'Hello World!'.match(/o/);
-})
 // add listeners
 .on('cycle', function(event) {
     console.log(String(event.target));

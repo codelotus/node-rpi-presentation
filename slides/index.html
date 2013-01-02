@@ -129,28 +129,80 @@ $ sudo make install
 				<section>
 					<h2>Benchmarks</h2>
 					<p>
-						Try it out! You can swipe through the slides and pinch your way to the overview.
+                    Using:
+                    <ul style="list-style-type: none;">
+                        <li>Benchmark.js<a href="http://www.benchmarkjs.com">(benchmarkjs.com)</a></li>
+                        <li>Express.js<a href="http://expressjs.com">(expressjs.com)</a></li> 
+                    </ul>
 					</p>
+                    <p>
+                    On:
+                    <ul>
+                        <li>Ec2 Micro Instance</li>
+                        <li>Raspberry Pi Model B</li>
+                    </ul>
+                    </p>
 				</section>
 
 				<section>
-					<h2>Marvelous Unordered List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
+					<h2>Benchmark.js</h2>
+<pre><code style="font-size: 18px;">
+var Benchmark = require('benchmark').Benchmark;
+var suite = new Benchmark.Suite;
+suite.add('RegExp#test', function() {
+    /o/.test('Hello World!');
+})
+.add('String#indexOf', function() {
+    'Hello World!'.indexOf('o') > -1;
+})
+.on('cycle', function(event) {
+    console.log(String(event.target));
+})
+.on('complete', function() {
+    console.log('Fastest is ' + this.filter('fastest').pluck('name'));
+})
+.run({ 'async': true });
+</code></pre>
 				</section>
+                <section>
+                    <h2>Ec2</h2>
+                    
+                </section>
 
 				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
+					<h2>Express.js</h2>
+<pre><code style="font-size: 18px;">
+var express = require('express');
+var app = express();
+
+app.use(express.cookieParser('some secret'));
+app.use(express.cookieSession());
+app.use(express.bodyParser());
+app.use(express.methodOverride());
+app.use(app.router);
+
+app.get('/', function(req, res) {
+    res.send('Hello World');
+});
+
+app.listen(3000);
+console.log('Listening on port 3000');
+</code></pre>
 				</section>
+
+                <section>
+                    <h2>EC2</h2>
+                    <p>
+
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Raspberry Pi</h2>
+                    <p>
+
+                    </p>
+                </section>
 
 				<section data-markdown>
 					<script type="text/template">
