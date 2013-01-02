@@ -158,16 +158,19 @@ suite.add('RegExp#test', function() {
 .on('cycle', function(event) {
     console.log(String(event.target));
 })
-.on('complete', function() {
-    console.log('Fastest is ' + this.filter('fastest').pluck('name'));
-})
 .run({ 'async': true });
 </code></pre>
 				</section>
 
                 <section>
                     <h2>Ec2</h2>
-                    
+                    <p>
+                      <pre><code style="font-size: 18px;">
+$ node functions.js
+RegExp#test x 7,806,523 ops/sec ±1.40% (89 runs sampled)
+String#indexOf x 13,118,193 ops/sec ±0.71% (94 runs sampled)
+                      </code></pre>
+                    </p>
                 </section>
 
                 <section>
@@ -205,10 +208,27 @@ console.log('Listening on port 3000');
                 <section>
                     <h2>EC2</h2>
                     <p>
-
+                      <pre><code style="font-size: 18px;">
+Concurrency Level:      100
+Time taken for tests:   3.064 seconds
+Complete requests:      8000
+Failed requests:        0
+Write errors:           0
+Total transferred:      2224000 bytes
+HTML transferred:       88000 bytes
+Requests per second:    2610.98 [#/sec] (mean)
+Time per request:       38.300 [ms] (mean)
+Time per request:       0.383 [ms] (mean, across all concurrent requests)
+Transfer rate:          708.84 [Kbytes/sec] received
+                      </code></pre>
                     </p>
                 </section>
                 
+                <section>
+                    <h2>EC2</h2>
+                    <img src="images/express_benchmark_ec2.png"/>
+                </section>
+
                 <section>
                     <h2>Raspberry Pi</h2>
                     <p>
