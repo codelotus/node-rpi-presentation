@@ -164,9 +164,21 @@ suite.add('RegExp#test', function() {
 .run({ 'async': true });
 </code></pre>
 				</section>
+
                 <section>
                     <h2>Ec2</h2>
                     
+                </section>
+
+                <section>
+                    <h2>Raspberry Pi</h2>
+                    <p>
+                      <pre><code style="font-size: 18px;">
+$ node functions.js
+RegExp#test x 206,382 ops/sec ±1.23% (81 runs sampled)
+String#indexOf x 375,805 ops/sec ±0.45% (92 runs sampled)
+                      </code></pre>
+                    </p>
                 </section>
 
 				<section>
@@ -196,15 +208,32 @@ console.log('Listening on port 3000');
 
                     </p>
                 </section>
-
+                
                 <section>
                     <h2>Raspberry Pi</h2>
                     <p>
-$ node functions.js
-RegExp#test x 206,382 ops/sec ±1.23% (81 runs sampled)
-String#indexOf x 375,805 ops/sec ±0.45% (92 runs sampled)
+                      <pre><code style="font-size: 18px;">
+Concurrency Level:      100
+Time taken for tests:   74.481 seconds
+Complete requests:      8000
+Failed requests:        0
+Write errors:           0
+Total transferred:      2224000 bytes
+HTML transferred:       88000 bytes
+Requests per second:    107.41 [#/sec] (mean)
+Time per request:       931.017 [ms] (mean)
+Time per request:       9.310 [ms] (mean, across all concurrent requests)
+Transfer rate:          29.16 [Kbytes/sec] received
+                      </code></pre>
                     </p>
                 </section>
+
+                <section>
+                    <h2>Raspberry Pi</h2>
+                    <img src="images/express_benchmark_rpi.png"/>
+                </section>
+
+
 
 				<section data-markdown>
 					<script type="text/template">
