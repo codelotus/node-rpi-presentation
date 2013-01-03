@@ -155,6 +155,11 @@ suite.add('RegExp#test', function() {
 .add('String#indexOf', function() {
     'Hello World!'.indexOf('o') > -1;
 })
+.add('FileSystem#readdir', function() {
+  fs.readdir('.', function(err, files){
+    files.size > 0;
+  });
+})
 .on('cycle', function(event) {
     console.log(String(event.target));
 })

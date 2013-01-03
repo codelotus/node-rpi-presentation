@@ -1,6 +1,6 @@
 var Benchmark = require('benchmark').Benchmark;
-
 var suite = new Benchmark.Suite;
+var fs = require('fs');
 
 // add tests
 suite.add('RegExp#test', function() {
@@ -8,6 +8,11 @@ suite.add('RegExp#test', function() {
 })
 .add('String#indexOf', function() {
     'Hello World!'.indexOf('o') > -1;
+})
+.add('FileSystem#readdir', function() {
+    fs.readdir('.', function(err, files){
+        files.size > 0;
+    });
 })
 // add listeners
 .on('cycle', function(event) {
