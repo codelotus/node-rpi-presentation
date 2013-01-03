@@ -21,4 +21,5 @@ set ylabel "response time (ms)"
 
 # plot data from "out.dat" using column 9 with smooth sbezier lines
 # and title of "nodejs" for the given data
-plot "out.dat" using 9 smooth sbezier with lines title "express on ec2 m1.mirco"
+plot "ec2_run.dat" using 9 smooth sbezier with lines title "ec2 t1.mirco", \
+  "rpi_run.dat" using 9 smooth sbezier with lines title "raspberry pi Model B"

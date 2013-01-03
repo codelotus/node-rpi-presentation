@@ -142,14 +142,15 @@ $ sudo make install
                         <li>Raspberry Pi Model B</li>
                     </ul>
                     </p>
-                    <section>
-                        <h3>t1.Micro</h3>
-                        <ul>
-                            <li>MemTotal: 615664 kB</li>
-                            <li>Intel Xeon CPU @ 2.66GHz</li>
-                        </ul>
-                    </section>
 				</section>
+
+                <section>
+                    <h3>t1.Micro</h3>
+                    <ul>
+                        <li>MemTotal: 615664 kB</li>
+                        <li>Intel Xeon CPU @ 2.66GHz</li>
+                    </ul>
+                </section>
 
 				<section>
 					<h2>Benchmark.js</h2>
@@ -219,6 +220,14 @@ console.log('Listening on port 3000');
 </code></pre>
 				</section>
 
+				<section>
+					<h2>ab</h2>
+                    <pre><code style="font-size: 18px;">
+$ ab -n 8000 -c 100 -g out.dat http://192.168.1.22:3000/
+                    </code></pre>
+                    <h5>thank you TJ: http://tinyurl.com/bady2fv</h5>
+                </section>
+
                 <section>
                     <h2>EC2</h2>
                     <p>
@@ -268,6 +277,10 @@ Transfer rate:          29.16 [Kbytes/sec] received
                 </section>
 
                 <section>
+                    <img src="images/ab_comparison.png" />
+                </section>
+
+                <section>
                     <h2>Quake?</h2>
                     <img src="images/quake.jpg"/>
                 </section>
@@ -284,6 +297,10 @@ Transfer rate:          29.16 [Kbytes/sec] received
                             <li class="fragment">Xbox 1</li>
                         </ul>
                     </ul>
+                </section>
+
+                <section>
+                    <img src="images/rpi_color.jpg" />
                 </section>
 
 
